@@ -1,0 +1,11 @@
+{
+  "mesonbuild.buildFolder": "build",
+  "mesonbuild.configureOnOpen": true,
+  "files.associations": {
+    "*.ui": "xml"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ui": "${capture}.ui.vala"
+  }
+}
