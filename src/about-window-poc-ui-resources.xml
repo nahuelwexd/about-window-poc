@@ -2,6 +2,7 @@
 <gresources>
 
 <gresource prefix="/com/nahuelwexd/AboutWindowPoC/ui">
+  <file alias="AboutWindow.ui">Windows/AboutWindow.ui</file>
   <file alias="AboutWindowDemo.ui">Windows/AboutWindowDemo.ui</file>
 </gresource>
 

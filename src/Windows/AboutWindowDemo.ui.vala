@@ -5,4 +5,4 @@
  */
 
 [GtkTemplate (ui = "/com/nahuelwexd/AboutWindowPoC/ui/AboutWindowDemo.ui")]
-sealed class Aw.AboutWindowDemo : Adw.Window {}
+sealed class Aw.AboutWindowDemo : AboutWindow {}
