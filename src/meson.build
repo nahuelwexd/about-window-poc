@@ -1,5 +1,5 @@
 about_window_poc_sources = [
-  'AboutWindow.ui.vala',
+  'AboutWindowDemo.ui.vala',
   'Application.vala',
 ]
 

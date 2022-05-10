@@ -25,6 +25,6 @@ sealed class Aw.Application : Adw.Application {
          * adding parameters to the constructor of the about window
          * that will not be needed when developing a real app. */
 
-        this.add_window (new AboutWindow ());
+        this.add_window (new AboutWindowDemo ());
     }
 }
