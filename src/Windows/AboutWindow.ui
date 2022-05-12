@@ -2,7 +2,10 @@
 <interface>
 
 <template class="AwAboutWindow" parent="AdwWindow">
-
+  <property name="modal">true</property>
+  <property name="destroy-with-parent">true</property>
+  <property name="default-width">360</property>
+  <property name="default-height">480</property>
 </template>
 
 </interface>
