@@ -13,35 +13,43 @@
   </style>
 
   <child>
-    <object class="GtkBox">
-      <property name="orientation">vertical</property>
+    <object class="GtkOverlay">
 
-      <child>
-        <object class="GtkHeaderBar" />
+      <child type="overlay">
+        <object class="GtkHeaderBar">
+          <property name="valign">start</property>
+        </object>
       </child>
 
       <child>
-        <object class="AwAboutAppInfo">
+        <object class="GtkScrolledWindow">
+          <property name="hscrollbar-policy">never</property>
 
-          <binding name="app-icon-name">
-            <lookup name="app-icon-name">AwAboutWindow</lookup>
-          </binding>
+          <child>
+            <object class="AwAboutAppInfo">
 
-          <binding name="app-name">
-            <lookup name="app-name">AwAboutWindow</lookup>
-          </binding>
+              <binding name="app-icon-name">
+                <lookup name="app-icon-name">AwAboutWindow</lookup>
+              </binding>
 
-          <binding name="development">
-            <lookup name="development">AwAboutWindow</lookup>
-          </binding>
+              <binding name="app-name">
+                <lookup name="app-name">AwAboutWindow</lookup>
+              </binding>
 
-          <binding name="author-name">
-            <lookup name="author-name">AwAboutWindow</lookup>
-          </binding>
+              <binding name="development">
+                <lookup name="development">AwAboutWindow</lookup>
+              </binding>
 
-          <binding name="version">
-            <lookup name="version">AwAboutWindow</lookup>
-          </binding>
+              <binding name="author-name">
+                <lookup name="author-name">AwAboutWindow</lookup>
+              </binding>
+
+              <binding name="version">
+                <lookup name="version">AwAboutWindow</lookup>
+              </binding>
+
+            </object>
+          </child>
 
         </object>
       </child>

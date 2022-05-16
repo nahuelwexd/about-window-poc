@@ -15,6 +15,14 @@ window.about headerbar.hidden label.title {
     color: transparent;
 }
 
+window.about aboutappinfo {
+    margin: 47px 24px 24px;
+}
+
+window.about scrollbar {
+    margin-top: 47px;
+}
+
 aboutappinfo image.large-icons {
     -gtk-icon-size: 128px;
 }
