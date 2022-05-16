@@ -14,3 +14,25 @@ window.about headerbar label.title {
 window.about headerbar.hidden label.title {
     color: transparent;
 }
+
+aboutappinfo image.large-icons {
+    -gtk-icon-size: 128px;
+}
+
+aboutappinfo label.version {
+    background-color: alpha(@accent_color, 0.1);
+
+    padding: 2px 12px;
+    min-height: 24px;
+
+    border-radius: 24px;
+}
+
+aboutappinfo > * + *:not(.author-name) {
+    margin-top: 12px;
+}
+
+aboutappinfo label.author-name,
+aboutappinfo label.devel {
+    margin-top: 6px;
+}

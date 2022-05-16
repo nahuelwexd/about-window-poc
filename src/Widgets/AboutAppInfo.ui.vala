@@ -27,6 +27,10 @@ sealed class Aw.AboutAppInfo : Gtk.Widget, Gtk.Buildable {
     public string? author_name { get; set; }
     public string? version { get; set; }
 
+    static construct {
+        set_css_name ("aboutappinfo");
+    }
+
     public override void dispose () {
         this._app_icon_image?.unparent ();
         this._app_name_label?.unparent ();

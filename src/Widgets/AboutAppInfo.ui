@@ -50,6 +50,7 @@
 
       <style>
         <class name="heading" />
+        <class name="devel" />
       </style>
 
     </object>
@@ -69,12 +70,17 @@
         </closure>
       </binding>
 
+      <style>
+        <class name="author-name" />
+      </style>
+
     </object>
   </child>
 
   <child>
     <object class="GtkLabel" id="_version_label">
       <property name="justify">center</property>
+      <property name="halign">center</property>
 
       <binding name="label">
         <lookup name="version">AwAboutAppInfo</lookup>
@@ -85,6 +91,12 @@
           <lookup name="version">AwAboutAppInfo</lookup>
         </closure>
       </binding>
+
+      <style>
+        <class name="heading" />
+        <class name="accent" />
+        <class name="version" />
+      </style>
 
     </object>
   </child>
