@@ -2,7 +2,10 @@
 <interface>
 
 <template class="AwAboutWindowDemo" parent="AwAboutWindow">
-
+  <property name="app-name">Application</property>
+  <property name="development">true</property>
+  <property name="author-name">Author Name</property>
+  <property name="version">1.0.0.beta4</property>
 </template>
 
 </interface>
