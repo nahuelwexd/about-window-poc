@@ -6,6 +6,91 @@
   <property name="destroy-with-parent">true</property>
   <property name="default-width">360</property>
   <property name="default-height">480</property>
+  <property name="title">About</property>
+
+  <style>
+    <class name="about" />
+  </style>
+
+  <child>
+    <object class="GtkBox">
+      <property name="orientation">vertical</property>
+
+      <child>
+        <object class="GtkHeaderBar" />
+      </child>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-size">large</property>
+
+          <binding name="icon-name">
+            <lookup name="app-icon-name">AwAboutWindow</lookup>
+          </binding>
+
+          <style>
+            <class name="icon-dropshadow" />
+          </style>
+
+        </object>
+      </child>
+
+      <child>
+        <object class="GtkLabel">
+          <property name="justify">center</property>
+
+          <binding name="label">
+            <lookup name="app-name">AwAboutWindow</lookup>
+          </binding>
+
+          <style>
+            <class name="title-1" />
+          </style>
+
+        </object>
+      </child>
+
+      <child>
+        <object class="GtkLabel">
+          <property name="label">Development Release</property>
+          <property name="justify">center</property>
+
+          <binding name="visible">
+            <lookup name="development">AwAboutWindow</lookup>
+          </binding>
+
+          <style>
+            <class name="heading" />
+          </style>
+
+        </object>
+      </child>
+
+      <child>
+        <object class="GtkLabel">
+          <property name="justify">center</property>
+
+          <binding name="label">
+            <lookup name="author-name">AwAboutWindow</lookup>
+          </binding>
+
+        </object>
+      </child>
+
+      <child>
+        <object class="GtkLabel">
+          <property name="justify">center</property>
+
+          <binding name="label">
+            <lookup name="version">AwAboutWindow</lookup>
+          </binding>
+
+        </object>
+      </child>
+
+    </object>
+  </child>
+
 </template>
 
 </interface>
