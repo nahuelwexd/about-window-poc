@@ -17,4 +17,8 @@ abstract class Aw.AboutWindow : Adw.Window {
     public Gtk.License license_type { get; set; }
     public string? license { get; set; }
     public string? copyright { get; set; }
+
+    static construct {
+        add_binding_action (Gdk.Key.Escape, 0, "window.close", null);
+    }
 }
