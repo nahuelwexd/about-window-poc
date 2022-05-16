@@ -2,6 +2,7 @@
 <interface>
 
 <template class="AwAboutWindowDemo" parent="AwAboutWindow">
+  <property name="app-icon-name">com.nahuelwexd.AboutWindowPoC</property>
   <property name="app-name">Application</property>
   <property name="development">true</property>
   <property name="author-name">Author Name</property>

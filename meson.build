@@ -13,6 +13,11 @@ project(
 
 gnome = import('gnome')
 
+prefix  = get_option('prefix')
+datadir = prefix / get_option('datadir')
+
+application_id = 'com.nahuelwexd.AboutWindowPoC'
+
 add_project_arguments(
   '-DG_LOG_DOMAIN="About-Window-PoC"',
   language : 'c',
@@ -29,3 +34,7 @@ adwaita_dep = dependency('libadwaita-1', version : '>=1.1')
 
 subdir('data')
 subdir('src')
+
+gnome.post_install(
+  gtk_update_icon_cache : true,
+)
