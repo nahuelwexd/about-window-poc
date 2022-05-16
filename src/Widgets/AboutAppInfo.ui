@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+
+<template class="AwAboutAppInfo" parent="GtkWidget">
+
+  <property name="layout-manager">
+    <object class="GtkBoxLayout">
+      <property name="orientation">vertical</property>
+    </object>
+  </property>
+
+  <child>
+    <object class="GtkImage" id="_app_icon_image">
+      <property name="icon-size">large</property>
+
+      <binding name="icon-name">
+        <lookup name="app-icon-name">AwAboutAppInfo</lookup>
+      </binding>
+
+      <style>
+        <class name="icon-dropshadow" />
+      </style>
+
+    </object>
+  </child>
+
+  <child>
+    <object class="GtkLabel" id="_app_name_label">
+      <property name="justify">center</property>
+
+      <binding name="label">
+        <lookup name="app-name">AwAboutAppInfo</lookup>
+      </binding>
+
+      <style>
+        <class name="title-1" />
+      </style>
+
+    </object>
+  </child>
+
+  <child>
+    <object class="GtkLabel" id="_devel_label">
+      <property name="label">Development Release</property>
+      <property name="justify">center</property>
+
+      <binding name="visible">
+        <lookup name="development">AwAboutAppInfo</lookup>
+      </binding>
+
+      <style>
+        <class name="heading" />
+      </style>
+
+    </object>
+  </child>
+
+  <child>
+    <object class="GtkLabel" id="_author_name_label">
+      <property name="justify">center</property>
+
+      <binding name="label">
+        <lookup name="author-name">AwAboutAppInfo</lookup>
+      </binding>
+
+      <binding name="visible">
+        <closure type="gboolean" function="string_not_empty">
+          <lookup name="author-name">AwAboutAppInfo</lookup>
+        </closure>
+      </binding>
+
+    </object>
+  </child>
+
+  <child>
+    <object class="GtkLabel" id="_version_label">
+      <property name="justify">center</property>
+
+      <binding name="label">
+        <lookup name="version">AwAboutAppInfo</lookup>
+      </binding>
+
+      <binding name="visible">
+        <closure type="gboolean" function="string_not_empty">
+          <lookup name="version">AwAboutAppInfo</lookup>
+        </closure>
+      </binding>
+
+    </object>
+  </child>
+
+</template>
+
+</interface>

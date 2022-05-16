@@ -10,7 +10,6 @@ abstract class Aw.AboutWindow : Adw.Window {
     public string app_name { get; set; default = Environment.get_application_name (); }
     public bool development { get; set; }
     public string? author_name { get; set; }
-    public string? description { get; set; }
     public string? version { get; set; }
     public Gtk.Widget? details { get; set; }
     public Gtk.Widget? credits { get; set; }

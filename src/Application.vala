@@ -21,10 +21,16 @@ sealed class Aw.Application : Adw.Application {
     public override void startup () {
         base.startup ();
 
+        this.setup_widgets ();
+
         /* we add the window to the app manually, so we can avoid
          * adding parameters to the constructor of the about window
          * that will not be needed when developing a real app. */
 
         this.add_window (new AboutWindowDemo ());
+    }
+
+    private void setup_widgets () {
+        typeof (AboutAppInfo).ensure ();
     }
 }

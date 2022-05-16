@@ -21,67 +21,25 @@
       </child>
 
       <child>
-        <object class="GtkImage">
-          <property name="icon-size">large</property>
+        <object class="AwAboutAppInfo">
 
-          <binding name="icon-name">
+          <binding name="app-icon-name">
             <lookup name="app-icon-name">AwAboutWindow</lookup>
           </binding>
 
-          <style>
-            <class name="icon-dropshadow" />
-          </style>
-
-        </object>
-      </child>
-
-      <child>
-        <object class="GtkLabel">
-          <property name="justify">center</property>
-
-          <binding name="label">
+          <binding name="app-name">
             <lookup name="app-name">AwAboutWindow</lookup>
           </binding>
 
-          <style>
-            <class name="title-1" />
-          </style>
-
-        </object>
-      </child>
-
-      <child>
-        <object class="GtkLabel">
-          <property name="label">Development Release</property>
-          <property name="justify">center</property>
-
-          <binding name="visible">
+          <binding name="development">
             <lookup name="development">AwAboutWindow</lookup>
           </binding>
 
-          <style>
-            <class name="heading" />
-          </style>
-
-        </object>
-      </child>
-
-      <child>
-        <object class="GtkLabel">
-          <property name="justify">center</property>
-
-          <binding name="label">
+          <binding name="author-name">
             <lookup name="author-name">AwAboutWindow</lookup>
           </binding>
 
-        </object>
-      </child>
-
-      <child>
-        <object class="GtkLabel">
-          <property name="justify">center</property>
-
-          <binding name="label">
+          <binding name="version">
             <lookup name="version">AwAboutWindow</lookup>
           </binding>
 
