@@ -32,6 +32,8 @@ add_project_arguments(
 
 adwaita_dep = dependency('libadwaita-1', version : '>=1.1')
 
+resources = []
+
 subdir('data')
 subdir('src')
 

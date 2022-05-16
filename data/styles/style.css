@@ -1,0 +1,16 @@
+window.about headerbar {
+    transition: background-color 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+window.about headerbar.hidden {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+window.about headerbar label.title {
+    transition: color 200ms ease-out;
+}
+
+window.about headerbar.hidden label.title {
+    color: transparent;
+}

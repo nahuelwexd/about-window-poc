@@ -1,4 +1,4 @@
-about_window_poc_sources = [
+sources = [
   'Widgets/AboutAppInfo.ui.vala',
 
   'Windows/AboutWindow.ui.vala',
@@ -7,19 +7,19 @@ about_window_poc_sources = [
   'Application.vala',
 ]
 
-about_window_poc_sources += gnome.compile_resources(
+resources += gnome.compile_resources(
   'about-window-poc-ui-resources',
   'about-window-poc-ui-resources.xml',
 )
 
-about_window_poc_deps = [
+deps = [
   adwaita_dep,
 ]
 
 executable(
   meson.project_name(),
-  about_window_poc_sources,
+  sources, resources,
 
-  dependencies : about_window_poc_deps,
+  dependencies : deps,
   install      : true,
 )
