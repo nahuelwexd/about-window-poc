@@ -16,13 +16,18 @@
     <object class="GtkOverlay">
 
       <child type="overlay">
-        <object class="GtkHeaderBar">
+        <object class="GtkHeaderBar" id="_headerbar">
           <property name="valign">start</property>
+
+          <style>
+            <class name="hidden" />
+          </style>
+
         </object>
       </child>
 
       <child>
-        <object class="GtkScrolledWindow">
+        <object class="GtkScrolledWindow" id="_scrolled_window">
           <property name="hscrollbar-policy">never</property>
 
           <child>
