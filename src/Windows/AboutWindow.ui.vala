@@ -17,11 +17,6 @@ abstract class Aw.AboutWindow : Adw.Window {
     public bool development { get; set; }
     public string? author_name { get; set; }
     public string? version { get; set; }
-    public Gtk.Widget? details { get; set; }
-    public Gtk.Widget? credits { get; set; }
-    public Gtk.License license_type { get; set; }
-    public string? license { get; set; }
-    public string? copyright { get; set; }
 
     construct {
         this._scrolled_window.vadjustment.value_changed.connect (this.on_scroll);
