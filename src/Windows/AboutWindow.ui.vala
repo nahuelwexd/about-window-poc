@@ -32,11 +32,16 @@ abstract class Aw.AboutWindow : Adw.Window {
     }
 
     private void on_scroll () {
-        if (this._scrolled_window.vadjustment.value < 187.0) {
+        var is_hidden = this._headerbar.has_css_class ("hidden");
+
+        if (!is_hidden && this._scrolled_window.vadjustment.value < 187.0) {
             this._headerbar.add_css_class ("hidden");
             return;
         }
 
-        this._headerbar.remove_css_class ("hidden");
+        if (is_hidden && this._scrolled_window.vadjustment.value >= 187.0) {
+            this._headerbar.remove_css_class ("hidden");
+            return;
+        }
     }
 }
