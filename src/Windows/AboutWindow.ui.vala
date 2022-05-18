@@ -44,4 +44,19 @@ abstract class Aw.AboutWindow : Adw.Window {
             return;
         }
     }
+
+    [GtkCallback]
+    private void update_devel_style () {
+        var style_applied = this.has_css_class ("devel");
+
+        if (!style_applied && development) {
+            this.add_css_class ("devel");
+            return;
+        }
+
+        if (style_applied && !development) {
+            this.remove_css_class ("devel");
+            return;
+        }
+    }
 }

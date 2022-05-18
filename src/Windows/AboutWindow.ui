@@ -7,6 +7,7 @@
   <property name="default-width">360</property>
   <property name="default-height">480</property>
   <property name="title">About</property>
+  <signal name="notify::development" handler="update_devel_style" />
 
   <style>
     <class name="about" />
