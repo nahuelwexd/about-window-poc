@@ -12,6 +12,9 @@ abstract class Aw.AboutWindow : Adw.Window {
     [GtkChild]
     private unowned Gtk.HeaderBar _headerbar;
 
+    [GtkChild]
+    private unowned Adw.PreferencesGroup _details_group;
+
     public string app_icon_name { get; set; default = "image-missing"; }
     public string app_name { get; set; default = Environment.get_application_name (); }
     public bool development { get; set; }
@@ -24,6 +27,10 @@ abstract class Aw.AboutWindow : Adw.Window {
 
     static construct {
         add_binding_action (Gdk.Key.Escape, 0, "window.close", null);
+    }
+
+    public void add_details_row (Gtk.Widget details_row) {
+        this._details_group.add (details_row);
     }
 
     public override void dispose () {

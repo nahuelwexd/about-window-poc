@@ -15,8 +15,12 @@ window.about headerbar.hidden label.title {
     color: transparent;
 }
 
-window.about aboutappinfo {
-    margin: 47px 24px 24px;
+window.about box.about-content {
+    margin: 47px 12px 24px;
+}
+
+window.about box.about-content > * + * {
+    margin-top: 24px;
 }
 
 window.about scrollbar {

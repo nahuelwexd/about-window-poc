@@ -5,7 +5,7 @@
   <property name="modal">true</property>
   <property name="destroy-with-parent">true</property>
   <property name="default-width">360</property>
-  <property name="default-height">480</property>
+  <property name="default-height">520</property>
   <property name="title">About</property>
   <signal name="notify::development" handler="update_devel_style" />
 
@@ -32,27 +32,50 @@
           <property name="hscrollbar-policy">never</property>
 
           <child>
-            <object class="AwAboutAppInfo">
+            <object class="AdwClamp">
+              <property name="maximum-size">360</property>
+              <property name="tightening-threshold">280</property>
 
-              <binding name="app-icon-name">
-                <lookup name="app-icon-name">AwAboutWindow</lookup>
-              </binding>
+              <child>
+                <object class="GtkBox">
+                  <property name="orientation">vertical</property>
 
-              <binding name="app-name">
-                <lookup name="app-name">AwAboutWindow</lookup>
-              </binding>
+                  <style>
+                    <class name="about-content" />
+                  </style>
 
-              <binding name="development">
-                <lookup name="development">AwAboutWindow</lookup>
-              </binding>
+                  <child>
+                    <object class="AwAboutAppInfo">
 
-              <binding name="author-name">
-                <lookup name="author-name">AwAboutWindow</lookup>
-              </binding>
+                      <binding name="app-icon-name">
+                        <lookup name="app-icon-name">AwAboutWindow</lookup>
+                      </binding>
 
-              <binding name="version">
-                <lookup name="version">AwAboutWindow</lookup>
-              </binding>
+                      <binding name="app-name">
+                        <lookup name="app-name">AwAboutWindow</lookup>
+                      </binding>
+
+                      <binding name="development">
+                        <lookup name="development">AwAboutWindow</lookup>
+                      </binding>
+
+                      <binding name="author-name">
+                        <lookup name="author-name">AwAboutWindow</lookup>
+                      </binding>
+
+                      <binding name="version">
+                        <lookup name="version">AwAboutWindow</lookup>
+                      </binding>
+
+                    </object>
+                  </child>
+
+                  <child>
+                    <object class="AdwPreferencesGroup" id="_details_group" />
+                  </child>
+
+                </object>
+              </child>
 
             </object>
           </child>
