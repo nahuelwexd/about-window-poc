@@ -36,6 +36,48 @@
     </object>
   </child>
 
+  <child type="support">
+    <object class="AdwActionRow">
+      <property name="title">Support Questions</property>
+      <property name="activatable">true</property>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-name">aw-open-external-link</property>
+        </object>
+      </child>
+
+    </object>
+  </child>
+
+  <child type="support">
+    <object class="AdwActionRow">
+      <property name="title">Report an Issue</property>
+      <property name="activatable">true</property>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-name">aw-open-external-link</property>
+        </object>
+      </child>
+
+    </object>
+  </child>
+
+  <child type="support">
+    <object class="AdwActionRow">
+      <property name="title">Troubleshooting</property>
+      <property name="activatable">true</property>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-name">go-next-symbolic</property>
+        </object>
+      </child>
+
+    </object>
+  </child>
+
 </template>
 
 </interface>

@@ -9,3 +9,8 @@ install_data(
   symbolic_dir / application_id + '-symbolic.svg',
   install_dir : datadir / 'icons/hicolor' / symbolic_dir,
 )
+
+resources += gnome.compile_resources(
+  'about-window-poc-icon-resources',
+  'about-window-poc-icon-resources.xml',
+)
