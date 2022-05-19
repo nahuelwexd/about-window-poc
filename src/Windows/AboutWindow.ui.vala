@@ -21,6 +21,9 @@ abstract class Aw.AboutWindow : Adw.Window, Gtk.Buildable {
     [GtkChild]
     private unowned Adw.PreferencesGroup _support_group;
 
+    [GtkChild]
+    private unowned Adw.PreferencesGroup _credit_group;
+
     public string app_icon_name { get; set; default = "image-missing"; }
     public string app_name { get; set; default = Environment.get_application_name (); }
     public bool development { get; set; }
@@ -46,7 +49,16 @@ abstract class Aw.AboutWindow : Adw.Window, Gtk.Buildable {
             return;
         }
 
+        if (type == "credit" && child is Gtk.Widget) {
+            this.add_credit_row ((Gtk.Widget) child);
+            return;
+        }
+
         base.add_child (builder, child, type);
+    }
+
+    public void add_credit_row (Gtk.Widget credit_row) {
+        this._credit_group.add (credit_row);
     }
 
     public void add_detail_row (Gtk.Widget details_row) {
