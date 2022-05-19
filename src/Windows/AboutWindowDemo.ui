@@ -78,6 +78,48 @@
     </object>
   </child>
 
+  <child type="credit">
+    <object class="AdwActionRow">
+      <property name="title">Credits</property>
+      <property name="activatable">true</property>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-name">go-next-symbolic</property>
+        </object>
+      </child>
+
+    </object>
+  </child>
+
+  <child type="credit">
+    <object class="AdwActionRow">
+      <property name="title">Legal</property>
+      <property name="activatable">true</property>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-name">go-next-symbolic</property>
+        </object>
+      </child>
+
+    </object>
+  </child>
+
+  <child type="credit">
+    <object class="AdwActionRow">
+      <property name="title">Acknowledgements</property>
+      <property name="activatable">true</property>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-name">go-next-symbolic</property>
+        </object>
+      </child>
+
+    </object>
+  </child>
+
 </template>
 
 </interface>
