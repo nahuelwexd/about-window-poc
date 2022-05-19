@@ -19,8 +19,8 @@ window.about box.about-content {
     margin: 47px 12px 24px;
 }
 
-window.about box.about-content > * + * {
-    margin-top: 24px;
+window.about box.about-content {
+    border-spacing: 24px;
 }
 
 window.about scrollbar.overlay-indicator {
@@ -48,11 +48,10 @@ aboutappinfo label.version {
     border-radius: 24px;
 }
 
-aboutappinfo > * + *:not(.author-name) {
-    margin-top: 12px;
+aboutappinfo {
+    border-spacing: 6px;
 }
 
-aboutappinfo label.author-name,
-aboutappinfo label.devel {
+aboutappinfo > * + *:not(.author-name):not(.devel) {
     margin-top: 6px;
 }
