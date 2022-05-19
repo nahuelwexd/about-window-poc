@@ -27,6 +27,10 @@ window.about scrollbar {
     margin-top: 47px;
 }
 
+window.about scrollbar:not(.overlay-indicator) {
+    border-top: 1px solid @borders;
+}
+
 aboutappinfo image.large-icons {
     -gtk-icon-size: 128px;
 }
