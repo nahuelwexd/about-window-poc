@@ -5,7 +5,7 @@
   <property name="app-icon-name">com.nahuelwexd.AboutWindowPoC</property>
   <property name="app-name">Application</property>
   <property name="development">true</property>
-  <property name="author-name">Author Name</property>
+  <property name="author-name">Developer Name</property>
   <property name="version">1.0.0.beta4</property>
 
   <child>
@@ -114,6 +114,50 @@
       <child>
         <object class="GtkImage">
           <property name="icon-name">go-next-symbolic</property>
+        </object>
+      </child>
+
+    </object>
+  </child>
+
+  <child type="app">
+    <object class="AdwActionRow">
+      <property name="title">Other App by Developer</property>
+      <property name="subtitle">Short description of this other app.</property>
+      <property name="activatable">true</property>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-name">go-next-symbolic</property>
+        </object>
+      </child>
+
+      <child type="prefix">
+        <object class="GtkImage">
+          <property name="icon-name">com.nahuelwexd.AboutWindowPoC</property>
+          <property name="icon-size">large</property>
+        </object>
+      </child>
+
+    </object>
+  </child>
+
+  <child type="app">
+    <object class="AdwActionRow">
+      <property name="title">Another App by Developer</property>
+      <property name="subtitle">Short description of this other app.</property>
+      <property name="activatable">true</property>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-name">go-next-symbolic</property>
+        </object>
+      </child>
+
+      <child type="prefix">
+        <object class="GtkImage">
+          <property name="icon-name">com.nahuelwexd.AboutWindowPoC</property>
+          <property name="icon-size">large</property>
         </object>
       </child>
 
