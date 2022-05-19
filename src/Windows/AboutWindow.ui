@@ -71,7 +71,7 @@
                   </child>
 
                   <child>
-                    <object class="AdwPreferencesGroup" id="_details_group" />
+                    <object class="AdwPreferencesGroup" id="_detail_group" />
                   </child>
 
                 </object>

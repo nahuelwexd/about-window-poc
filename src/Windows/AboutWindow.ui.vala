@@ -16,7 +16,7 @@ abstract class Aw.AboutWindow : Adw.Window, Gtk.Buildable {
     private unowned Gtk.HeaderBar _headerbar;
 
     [GtkChild]
-    private unowned Adw.PreferencesGroup _details_group;
+    private unowned Adw.PreferencesGroup _detail_group;
 
     public string app_icon_name { get; set; default = "image-missing"; }
     public string app_name { get; set; default = Environment.get_application_name (); }
@@ -34,15 +34,15 @@ abstract class Aw.AboutWindow : Adw.Window, Gtk.Buildable {
 
     public void add_child (Gtk.Builder builder, Object child, string? type) {
         if (this._overlay != null && child is Gtk.Widget) {
-            this.add_details_row ((Gtk.Widget) child);
+            this.add_detail_row ((Gtk.Widget) child);
             return;
         }
 
         base.add_child (builder, child, type);
     }
 
-    public void add_details_row (Gtk.Widget details_row) {
-        this._details_group.add (details_row);
+    public void add_detail_row (Gtk.Widget details_row) {
+        this._detail_group.add (details_row);
     }
 
     public override void dispose () {
