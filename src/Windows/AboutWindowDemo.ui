@@ -7,6 +7,35 @@
   <property name="development">true</property>
   <property name="author-name">Author Name</property>
   <property name="version">1.0.0.beta4</property>
+
+  <child>
+    <object class="AdwActionRow">
+      <property name="title">What's New</property>
+      <property name="activatable">true</property>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-name">go-next-symbolic</property>
+        </object>
+      </child>
+
+    </object>
+  </child>
+
+  <child>
+    <object class="AdwActionRow">
+      <property name="title">Learn More</property>
+      <property name="activatable">true</property>
+
+      <child>
+        <object class="GtkImage">
+          <property name="icon-name">go-next-symbolic</property>
+        </object>
+      </child>
+
+    </object>
+  </child>
+
 </template>
 
 </interface>
