@@ -74,6 +74,10 @@
                     <object class="AdwPreferencesGroup" id="_detail_group" />
                   </child>
 
+                  <child>
+                    <object class="AdwPreferencesGroup" id="_support_group" />
+                  </child>
+
                 </object>
               </child>
 

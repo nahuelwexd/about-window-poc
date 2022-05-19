@@ -18,6 +18,9 @@ abstract class Aw.AboutWindow : Adw.Window, Gtk.Buildable {
     [GtkChild]
     private unowned Adw.PreferencesGroup _detail_group;
 
+    [GtkChild]
+    private unowned Adw.PreferencesGroup _support_group;
+
     public string app_icon_name { get; set; default = "image-missing"; }
     public string app_name { get; set; default = Environment.get_application_name (); }
     public bool development { get; set; }
@@ -33,8 +36,13 @@ abstract class Aw.AboutWindow : Adw.Window, Gtk.Buildable {
     }
 
     public void add_child (Gtk.Builder builder, Object child, string? type) {
-        if (this._overlay != null && child is Gtk.Widget) {
+        if ((type == null && this._overlay != null || type == "detail") && child is Gtk.Widget) {
             this.add_detail_row ((Gtk.Widget) child);
+            return;
+        }
+
+        if (type == "support" && child is Gtk.Widget) {
+            this.add_support_row ((Gtk.Widget) child);
             return;
         }
 
@@ -43,6 +51,10 @@ abstract class Aw.AboutWindow : Adw.Window, Gtk.Buildable {
 
     public void add_detail_row (Gtk.Widget details_row) {
         this._detail_group.add (details_row);
+    }
+
+    public void add_support_row (Gtk.Widget support_row) {
+        this._support_group.add (support_row);
     }
 
     public override void dispose () {
