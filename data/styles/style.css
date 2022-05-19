@@ -23,8 +23,12 @@ window.about box.about-content > * + * {
     margin-top: 24px;
 }
 
-window.about scrollbar {
+window.about scrollbar.overlay-indicator {
     margin-top: 47px;
+}
+
+window.about scrollbar:not(.overlay-indicator) {
+    margin-top: 46px;
 }
 
 window.about scrollbar:not(.overlay-indicator) {
