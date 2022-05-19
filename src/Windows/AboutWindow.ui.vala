@@ -5,7 +5,10 @@
  */
 
 [GtkTemplate (ui = "/com/nahuelwexd/AboutWindowPoC/ui/AboutWindow.ui")]
-abstract class Aw.AboutWindow : Adw.Window {
+abstract class Aw.AboutWindow : Adw.Window, Gtk.Buildable {
+    [GtkChild]
+    private unowned Gtk.Overlay _overlay;
+
     [GtkChild]
     private unowned Gtk.ScrolledWindow _scrolled_window;
 
@@ -27,6 +30,15 @@ abstract class Aw.AboutWindow : Adw.Window {
 
     static construct {
         add_binding_action (Gdk.Key.Escape, 0, "window.close", null);
+    }
+
+    public void add_child (Gtk.Builder builder, Object child, string? type) {
+        if (this._overlay != null && child is Gtk.Widget) {
+            this.add_details_row ((Gtk.Widget) child);
+            return;
+        }
+
+        base.add_child (builder, child, type);
     }
 
     public void add_details_row (Gtk.Widget details_row) {

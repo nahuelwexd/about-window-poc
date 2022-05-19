@@ -14,7 +14,7 @@
   </style>
 
   <child>
-    <object class="GtkOverlay">
+    <object class="GtkOverlay" id="_overlay">
 
       <child type="overlay">
         <object class="GtkHeaderBar" id="_headerbar">
