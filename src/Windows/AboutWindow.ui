@@ -45,27 +45,98 @@
                   </style>
 
                   <child>
-                    <object class="AwAboutAppInfo">
+                    <object class="GtkBox">
+                      <property name="orientation">vertical</property>
 
-                      <binding name="app-icon-name">
-                        <lookup name="app-icon-name">AwAboutWindow</lookup>
-                      </binding>
+                      <style>
+                        <class name="app-info" />
+                      </style>
 
-                      <binding name="app-name">
-                        <lookup name="app-name">AwAboutWindow</lookup>
-                      </binding>
+                      <child>
+                        <object class="GtkImage">
+                          <property name="icon-size">large</property>
 
-                      <binding name="development">
-                        <lookup name="development">AwAboutWindow</lookup>
-                      </binding>
+                          <binding name="icon-name">
+                            <lookup name="app-icon-name">AwAboutWindow</lookup>
+                          </binding>
 
-                      <binding name="author-name">
-                        <lookup name="author-name">AwAboutWindow</lookup>
-                      </binding>
+                          <style>
+                            <class name="icon-dropshadow" />
+                          </style>
 
-                      <binding name="version">
-                        <lookup name="version">AwAboutWindow</lookup>
-                      </binding>
+                        </object>
+                      </child>
+
+                      <child>
+                        <object class="GtkLabel">
+                          <property name="justify">center</property>
+
+                          <binding name="label">
+                            <lookup name="app-name">AwAboutWindow</lookup>
+                          </binding>
+
+                          <style>
+                            <class name="title-1" />
+                          </style>
+
+                        </object>
+                      </child>
+
+                      <child>
+                        <object class="GtkLabel">
+                          <property name="label">Development Release</property>
+                          <property name="justify">center</property>
+
+                          <binding name="visible">
+                            <lookup name="development">AwAboutWindow</lookup>
+                          </binding>
+
+                          <style>
+                            <class name="heading" />
+                            <class name="devel" />
+                          </style>
+
+                        </object>
+                      </child>
+
+                      <child>
+                        <object class="GtkLabel">
+                          <property name="justify">center</property>
+
+                          <binding name="label">
+                            <lookup name="author-name">AwAboutWindow</lookup>
+                          </binding>
+
+                          <binding name="visible">
+                            <closure type="gboolean" function="string_not_empty">
+                              <lookup name="author-name">AwAboutWindow</lookup>
+                            </closure>
+                          </binding>
+
+                          <style>
+                            <class name="author-name" />
+                          </style>
+
+                        </object>
+                      </child>
+
+                      <child>
+                        <object class="GtkLabel">
+                          <property name="justify">center</property>
+                          <property name="halign">center</property>
+
+                          <binding name="label">
+                            <lookup name="version">AwAboutWindow</lookup>
+                          </binding>
+
+                          <style>
+                            <class name="heading" />
+                            <class name="accent" />
+                            <class name="version" />
+                          </style>
+
+                        </object>
+                      </child>
 
                     </object>
                   </child>

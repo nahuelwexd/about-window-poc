@@ -101,6 +101,11 @@ abstract class Aw.AboutWindow : Adw.Window, Gtk.Buildable {
     }
 
     [GtkCallback]
+    private bool string_not_empty (string? str) {
+        return str != null && str.length > 0;
+    }
+
+    [GtkCallback]
     private void update_devel_style () {
         var style_applied = this.has_css_class ("devel");
 

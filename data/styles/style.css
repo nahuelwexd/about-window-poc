@@ -35,11 +35,11 @@ window.about scrollbar:not(.overlay-indicator) {
     border-top: 1px solid @borders;
 }
 
-aboutappinfo image.large-icons {
+window.about box.app-info image.large-icons {
     -gtk-icon-size: 128px;
 }
 
-aboutappinfo label.version {
+window.about box.app-info label.version {
     background-color: alpha(@accent_color, 0.1);
 
     padding: 2px 12px;
@@ -48,10 +48,10 @@ aboutappinfo label.version {
     border-radius: 24px;
 }
 
-aboutappinfo {
+window.about box.app-info {
     border-spacing: 6px;
 }
 
-aboutappinfo > * + *:not(.author-name):not(.devel) {
+window.about box.app-info > * + *:not(.author-name):not(.devel) {
     margin-top: 6px;
 }
