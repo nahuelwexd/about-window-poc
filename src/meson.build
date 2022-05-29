@@ -1,6 +1,4 @@
 sources = [
-  'Widgets/AboutAppInfo.ui.vala',
-
   'Windows/AboutWindow.ui.vala',
   'Windows/AboutWindowDemo.ui.vala',
 
